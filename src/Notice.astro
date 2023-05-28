@@ -1,0 +1,48 @@
+<div
+    id="notice"
+    class="flex items-center gap-x-2 md:gap-x-4 py-2 px-6 sm:px-3 bg-red-300 justify-center absolute top-0 w-full z-50 -translate-y-12 transition-transform duration-700" 
+>
+    <p class="text-sm leading-6 text-black text-center md:max-w-md lg:max-w-none">
+        <strong class="font-semibold">
+            ¡Esta no es la página oficial!
+        </strong>
+
+        Esta página ha sido realizada para fines educativos. La página oficial es:
+
+        <a class="font-bold" href="https://lavelada.es" target="_blank" rel="noopener noreferrer">
+            https://lavelada.es
+        </a>
+    </p>
+
+    <button id="close" class="hover:scale-150 inline-block transition lg:absolute lg:right-4">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.05 21.02" class="h-5 w-5">
+            <path d="M18.22,17.16c2.91,3.59,3.28,3.34-.53.53L2.36,2.36C.5-.5-.39-.53,2.88,1.83Z" transform="translate(-0.2 0.37)" style="fill:none;stroke:#000;stroke-miterlimit:10"/>
+            <path d="M3,17.16c-2.92,3.59-3.29,3.34.52.53L18.82,2.36c1.85-2.86,2.74-2.89-.53-.53Z" transform="translate(-0.2 0.37)" style="fill:none;stroke:#000;stroke-miterlimit:10"/>
+        </svg>
+    </button>
+</div>
+
+<script>
+    const close = document.querySelector("#close")
+    const banner = document.querySelector("#notice")
+
+    // Show notice
+    banner.classList.remove("-translate-y-12")
+
+    // Set false to avoid bug
+    localStorage.setItem("notice", "false")
+
+    //Read localStorage
+    const notice = localStorage.getItem("notice")
+
+    if (notice == "true") {
+        banner.remove()
+    } else {
+        // Hide notice
+        close.addEventListener("click", () => {
+            banner.remove()
+            // Set true
+            localStorage.setItem("notice", "true")
+        })
+    }
+</script>
