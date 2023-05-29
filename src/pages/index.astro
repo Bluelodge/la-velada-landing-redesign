@@ -164,9 +164,15 @@ import Location from "../Location.astro";
 					</a>
 				</div>
 				<div class="px-3 pt-2 pb-1 bg-white text-black text-center">
-					<p id="entradas" class="font-boxing text-[20px]">
+					<a
+						id="tickets"
+						class="font-boxing text-[20px]"
+						href="https://www.entradas.com/artist/la-velada-del-ano/?affiliate=LVL"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						cívitas metropolitano
-					</p>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -269,17 +275,32 @@ import Location from "../Location.astro";
 		line-gap-override: 22%;
 	}
 
+	/* Iconos footer */
 	#igIcon, #twitterIcon {
 		fill: #f9fafb;
 	}
-
 	#igIcon:hover, #twitterIcon:hover {
 		fill: url(#goldenGradient);
 	}
 </style>
 
 <script>
-	
+	// Info tickets
+	const $tickets = document.querySelector('#tickets') as HTMLElement
+	$tickets.addEventListener("mouseenter", () => {
+		$tickets.innerText = "sold out"
+		$tickets.style.color = "#f59e0b"
+		$tickets.style.letterSpacing = "0.15em"
+		$tickets.style.textTransform = "uppercase"
+	})
+	$tickets.addEventListener("mouseleave", () => {
+		$tickets.innerText = "cívitas metropolitano"
+		$tickets.style.color = "#000"
+		$tickets.style.letterSpacing = "0em"
+		$tickets.style.textTransform = "lowercase"
+	})
+
+	// Info boxers
 	const $boxers = document.querySelector('#boxers')
 	const $boxersImages = $boxers.querySelectorAll('img')
 	const $logo = document.querySelector('#logo') as HTMLElement
