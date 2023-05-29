@@ -43,7 +43,7 @@ import Location from "../Location.astro";
 				</div>
 			</header>
 
-			<!-- INFO BOXEADORES -->
+			<!-- BOXEADORES -->
 			<section class="relative">
 				<div
 					id="boxers"
@@ -70,28 +70,28 @@ import Location from "../Location.astro";
 							style={boxers.mayichi.clip}
 						/>
 						<img
-							class="left-[13%] h-[75%] z-30 animate-fade-right animate-delay-300"
+							class="left-[15%] h-[75%] z-30 animate-fade-right animate-delay-300"
 							srcset="/boxers/viruzz-mobile.webp 767w, /boxers/viruzz.webp"
 							sizes="(max-width: 767px) 767px, 100vw"
 							alt="Viruzz"
 							style={boxers.viruzz.clip}
 						/>
 						<img
-							class="left-[25%] h-[69%] z-20 animate-fade-right animate-delay-500"
+							class="left-[28%] h-[69%] z-20 animate-fade-right animate-delay-500"
 							srcset="/boxers/fernanfloo-mobile.webp 767w, /boxers/fernanfloo.webp"
 							sizes="(max-width: 767px) 767px, 100vw"
 							alt="Fernanfloo"
 							style={boxers.fernanfloo.clip}
 						/>
 						<img
-							class="left-[35%] h-[66%] z-10 animate-fade-right animate-delay-700"
+							class="left-[40%] h-[66%] z-10 animate-fade-right animate-delay-700"
 							srcset="/boxers/larivers-mobile.webp 767w, /boxers/larivers.webp"
 							sizes="(max-width: 767px) 767px, 100vw"
 							alt="Larivers"
 							style={boxers.larivers.clip}
 						/>
 						<img
-							class="left-[40%] h-[61%] z-0 animate-fade-right animate-delay-1000"
+							class="left-[46%] h-[61%] z-0 animate-fade-right animate-delay-1000"
 							srcset="/boxers/papigavi-mobile.webp 767w, /boxers/papigavi.webp"
 							sizes="(max-width: 767px) 767px, 100vw"
 							alt="Papigavi"
@@ -109,35 +109,35 @@ import Location from "../Location.astro";
 							fetchpriority="high"
 						/>
 						<img
-							class="right-[5%] h-[80%] z-40 animate-fade-left"
+							class="right-[7%] h-[80%] z-40 animate-fade-left"
 							srcset="/boxers/amouranth-mobile.webp 767w, /boxers/amouranth.webp"
 							sizes="(max-width: 767px) 767px, 100vw"
 							alt="Amouranth"
 							style={boxers.amouranth.clip}
 						/>
 						<img
-							class="right-[13%] h-[76%] z-30 animate-fade-left animate-delay-300"
+							class="right-[17%] h-[76%] z-30 animate-fade-left animate-delay-300"
 							srcset="/boxers/shelao-mobile.webp 767w, /boxers/shelao.webp"
 							sizes="(max-width: 767px) 767px, 100vw"
 							alt="Shelao"
 							style={boxers.shelao.clip}
 						/>
 						<img
-							class="right-[25%] h-[69%] z-20 animate-fade-left animate-delay-500"
+							class="right-[28%] h-[69%] z-20 animate-fade-left animate-delay-500"
 							srcset="/boxers/luzu-mobile.webp 767w, /boxers/luzu.webp"
 							sizes="(max-width: 767px) 767px, 100vw"
 							alt="Luzu"
 							style={boxers.luzu.clip}
 						/>
 						<img
-							class="right-[35%] h-[65%] z-10 animate-fade-left animate-delay-700"
+							class="right-[39%] h-[65%] z-10 animate-fade-left animate-delay-700"
 							srcset="/boxers/rivers-mobile.webp 767w, /boxers/rivers.webp"
 							sizes="(max-width: 767px) 767px, 100vw"
 							alt="Rivers"
 							style={boxers.rivers.clip}
 						/>
 						<img
-							class="right-[40%] h-[60%] z-0 animate-fade-left animate-delay-1000"
+							class="right-[46%] h-[60%] z-0 animate-fade-left animate-delay-1000"
 							srcset="/boxers/ampeter-mobile.webp 767w, /boxers/ampeter.webp"
 							sizes="(max-width: 760px) 760px, 100vw"
 							alt="Ampeter"
@@ -164,7 +164,7 @@ import Location from "../Location.astro";
 					</a>
 				</div>
 				<div class="px-3 pt-2 pb-1 bg-white text-black text-center">
-					<p class="font-boxing text-[20px]">
+					<p id="entradas" class="font-boxing text-[20px]">
 						cívitas metropolitano
 					</p>
 				</div>
@@ -279,6 +279,7 @@ import Location from "../Location.astro";
 </style>
 
 <script>
+	
 	const $boxers = document.querySelector('#boxers')
 	const $boxersImages = $boxers.querySelectorAll('img')
 	const $logo = document.querySelector('#logo') as HTMLElement
